@@ -1,0 +1,99 @@
+*{
+  background-color: rgb(166, 231, 96);
+  text-align: center;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Change by me */
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+.HOME{
+  text-align: left;
+  margin: 10px;
+  text-decoration: none !important;
+}
+h2{
+  text-align: center;
+}
+
+.box{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.form{
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+input{
+  margin: 20px;
+  border: 2px solid #2c2525;
+  border-radius: 5px;
+  background-color: transparent;
+}
+button{
+  height: 30px;
+  width: 200px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 2px solid #2c2525;
+  background-color: rgb(23, 48, 239);
+  color: #fff;
+  font-weight: bold;
+}
+
+input[type="text"] ,input[type="email"],input[type="password"]{
+  height:30px;
+  width: 400px;
+}
+
+p{
+  color: red;
+}
