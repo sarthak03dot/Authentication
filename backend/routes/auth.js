@@ -16,7 +16,7 @@ router.post("/register", async (req, res) => {
   }
   const existingUser = await User.findOne({ email });
   if (existingUser) {
-    return res.status(400).json({ msg: "User Already exists." });
+    return res.status(400).json({ msg: "User Already exist with email." });
   }
   const newUser = new User({ name, email, password });
   await newUser.save();
@@ -30,11 +30,11 @@ router.post("/login", async (req, res) => {
 
   const user = await User.findOne({ email });
   if (!user) {
-    return res.status(400).json({ msg: "Invalid creditentials" });
+    return res.status(400).json({ msg: "Invalid Email, Please Register First." });
   }
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) {
-    return res.status(400).json({ msg: "Invalid credientials" });
+    return res.status(400).json({ msg: "Invalid Email or Password." });
   }
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
     expiresIn: "1h",
